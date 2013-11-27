@@ -14,5 +14,12 @@
     "turnstile"
   ],
   "author": "Tom Rudick",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "~2.1.0",
+    "request": "~2.27.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  }
 }
