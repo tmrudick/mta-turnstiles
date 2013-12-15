@@ -14,6 +14,16 @@ Installation
 
 Install without the `-g` flag to use in custom scripts.
 
+Output Format
+-------------
+
+The output format is still a csv but contains a line for each individual reading with the station latitude and longitude added.
+
+    remote,date,time,description,entries,exits,lat,lng,station
+    R051,12-07-13,03:00:00,REGULAR,004393839,001499552,40.762796,-73.967686,LEXINGTON AVE
+    R051,12-07-13,07:00:00,REGULAR,004393850,001499567,40.762796,-73.967686,LEXINGTON AVE
+    R051,12-07-13,11:00:00,REGULAR,004393929,001499660,40.762796,-73.967686,LEXINGTON AVE
+
 Usage
 -----
 
