@@ -1,2 +1,26 @@
 #!/usr/bin/env node
 
+var program = require('commander'),
+    pkg = require('../package.json'),
+    fs = require('fs'),
+    url = require('url'),
+    turnstiles = require('../lib/turnstiles');
+
+program
+  .version(pkg.version)
+  .usage('[options] <url>')
+  .option('-f, --file <filename>', 'output filename')
+  .parse(process.argv);
+
+if (program.args.length !== 1) {
+  throw new Error('Can only parse one file at a time!');
+}
+
+var outputStream = program.file ? fs.createWriteStream(program.file) : process.stdout,
+    dataUrl = program.args[0];
+
+if (url.parse(dataUrl).protocol != 'http:') {
+  throw new Error('Invalid file URL');
+}
+
+turnstiles(dataUrl).pipe(outputStream);
