@@ -1,7 +1,7 @@
 MTA Turnstile Data Parser
 =========================
 
-The MTA had a weekly snapshot of the entrances and exits for every transit turnstile in the city of New York.
+The [MTA](http://new.mta.info/) had a weekly snapshot of the entrances and exits for every transit turnstile in the city of New York.
 
 It is in a bit of strange format and doesn't really lend itself well to visualizationg or further processing.
 
