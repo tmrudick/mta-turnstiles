@@ -1,13 +1,17 @@
 {
   "name": "mta-turnstiles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Downloads and parses the New York City MTA subway turnstile data",
-  "main": "index.js",
+  "main": "lib/turnstiles.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "mta-turnstiles": "bin/mta-turnstiles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tmrudick/mta-turnstiles.git"
   },
   "keywords": [
     "subway",
