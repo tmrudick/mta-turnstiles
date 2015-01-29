@@ -1,9 +1,11 @@
 require('chai').should();
-var parser = require('../lib/parser');
 var path = require('path');
 var fs = require('fs');
 
-describe('Parser', function() {
+var turnstiles = require('./turnstiles');
+
+describe('turnstiles', function() {
+    /*
     it('should parse a string', function() {
         var file = path.resolve('./test/data/turnstile_140208.txt');
         var contents = fs.readFileSync(file, 'utf8');
@@ -28,4 +30,5 @@ describe('Parser', function() {
         results['A002']['R051'].should.be.a('object');
         results['A002']['02-00-00'].should.be.a('object');
     });
+    */
 });

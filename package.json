@@ -4,7 +4,10 @@
   "description": "Downloads and parses the New York City MTA subway turnstile data",
   "main": "lib/turnstiles.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js"
+  },
+  "bin": {
+    "mta-turnstiles": "bin/mta-turnstiles"
   },
   "bin": {
     "mta-turnstiles": "bin/mta-turnstiles"
