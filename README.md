@@ -47,6 +47,12 @@ You can also use this module with a callback if you aren't into streams.
         console.log(data);
     });
 
+You can also specify a local file.
+
+    turnstiles('/path/to/file/turnstile_131214.txt', function(data) {
+        console.log(data);
+    });
+
 Issues
 ------
 
