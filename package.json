@@ -1,6 +1,6 @@
 {
   "name": "mta-turnstiles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Downloads and parses the New York City MTA subway turnstile data",
   "main": "lib/turnstiles.js",
   "scripts": {
