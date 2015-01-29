@@ -27,7 +27,7 @@ describe('Turnstile Stream', function() {
 
     });
 
-    it.only('should process the new format, with a header', function(done) {
+    it('should process the new format, with a header', function(done) {
 
       var file = fs.readFileSync(path.resolve('./test/data/turnstile_150124.txt'), { encoding : 'utf8' });
       var lines = file.split('\n').slice(1,7); // get rid of header
