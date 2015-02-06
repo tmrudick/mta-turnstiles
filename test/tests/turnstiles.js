@@ -13,8 +13,8 @@ describe('turnstiles', function() {
             data = data.split('\n');
             var header = data[0];
             var firstLine = data[1];
-            header.should.equal('remote,date,time,description,entries,exits,lat,lng,station');
-            firstLine.should.equal('R051,02-01-14,03:00:00,REGULAR,004469306,001523801,40.762796,-73.967686,LEXINGTON AVE');
+            header.should.equal('remote,station,linename,division,date,time,description,entries,exits,lat,lng');
+            firstLine.should.equal('R051,LEXINGTON AVE,,,02-01-14,03:00:00,REGULAR,004469306,001523801,40.762796,-73.967686');
             done();
         });
     });
@@ -29,6 +29,16 @@ describe('turnstiles', function() {
             firstLine.should.equal('R051,LEXINGTON AVE,NQR456,BMT,01/17/2015,03:00:00,REGULAR,0004964844,0001682142,40.762796,-73.967686');
             done();
         });
+    });
+
+    it('should optionally remove the header', function(done) {
+        var file = path.resolve('./test/data/turnstile_150124.txt');
+        turnstiles(file, function(data) {
+            data = data.split('\n');
+            var firstLine = data[0];
+            firstLine.should.equal('R051,LEXINGTON AVE,NQR456,BMT,01/17/2015,03:00:00,REGULAR,0004964844,0001682142,40.762796,-73.967686');
+            done();
+        }, { header: false });
     });
 
     it('should parse a url', function(done) {

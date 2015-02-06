@@ -53,6 +53,13 @@ You can also specify a local file.
         console.log(data);
     });
 
+You can specify an optional list of options like so:
+
+    turnstiles('/path/to/file/turnstile_131214.txt', function(data) {
+        console.log(data);
+    }, { header: false });
+
+The only option at this point is 'header', which if set to false will output data without header.
 Issues
 ------
 
