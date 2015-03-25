@@ -47,6 +47,19 @@ You can also use this module with a callback if you aren't into streams.
         console.log(data);
     });
 
+You can also specify a local file.
+
+    turnstiles('/path/to/file/turnstile_131214.txt', function(data) {
+        console.log(data);
+    });
+
+You can specify an optional list of options like so:
+
+    turnstiles('/path/to/file/turnstile_131214.txt', function(data) {
+        console.log(data);
+    }, { header: false });
+
+The only option at this point is 'header', which if set to false will output data without header.
 Issues
 ------
 

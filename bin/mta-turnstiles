@@ -19,7 +19,7 @@ if (program.args.length !== 1) {
 var outputStream = program.file ? fs.createWriteStream(program.file) : process.stdout,
     dataUrl = program.args[0];
 
-if (url.parse(dataUrl).protocol != 'http:') {
+if ( !fs.existsSync(dataUrl) && url.parse(dataUrl).protocol != 'http:') {
   throw new Error('Invalid file URL');
 }
 
