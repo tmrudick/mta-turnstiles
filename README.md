@@ -31,7 +31,7 @@ Usage
 
     mta-turnstiles <url of weekly snapshot>
 
-A list of snapshots can be found [here](http://www.mta.info/developers/turnstile.html).
+A list of snapshots can be found [here](http://web.mta.info/developers/turnstile.html).
 
 You can also specify the `-f` flag with a filename to output directly to a file.
 
